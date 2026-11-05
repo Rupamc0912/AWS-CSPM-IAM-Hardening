@@ -1,0 +1,13 @@
+framework:
+  - terraform
+directory:
+  - .
+skip-check:
+  - CKV_AWS_18    # S3 access logging: would need a 3rd bucket, documented as accepted risk
+  - CKV_AWS_144   # Cross-region replication: costs money, out of scope
+  - CKV2_AWS_62   # S3 event notifications: not needed
+  - CKV2_AWS_10   # CloudTrail to CloudWatch Logs: documented future enhancement
+  - CKV_AWS_252   # CloudTrail SNS topic: documented future enhancement
+  - CKV_AWS_109   # Standard KMS key policy
+  - CKV_AWS_356   # Standard KMS key policy
+  - CKV_AWS_111   # Standard KMS key policy
