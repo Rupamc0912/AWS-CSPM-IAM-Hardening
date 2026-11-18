@@ -8,6 +8,3 @@ skip-check:
   - CKV2_AWS_62   # S3 event notifications: not needed
   - CKV2_AWS_10   # CloudTrail to CloudWatch Logs: documented future enhancement
   - CKV_AWS_252   # CloudTrail SNS topic: documented future enhancement
-  - CKV_AWS_109   # Standard KMS key policy
-  - CKV_AWS_356   # Standard KMS key policy
-  - CKV_AWS_111   # Standard KMS key policy
