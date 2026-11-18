@@ -10,6 +10,10 @@ locals {
 }
 
 data "aws_iam_policy_document" "kms" {
+  #checkov:skip=CKV_AWS_109:Account-root admin statement in a KMS key policy; Resource "*" refers to this key only
+  #checkov:skip=CKV_AWS_111:Account-root admin statement in a KMS key policy; Resource "*" refers to this key only
+  #checkov:skip=CKV_AWS_356:Resource "*" in a KMS key policy refers to this key only; CloudTrail statement is limited by aws:SourceArn
+
   statement {
     sid       = "EnableAccountAdmin"
     actions   = ["kms:*"]
